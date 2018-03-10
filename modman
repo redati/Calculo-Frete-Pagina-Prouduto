@@ -1,4 +1,4 @@
 app/code/community/WebDevlopers/ProductPageShipping app/code/community/WebDevlopers/ProductPageShipping
-app/design/frontend/base/default app/design/frontend/base/default
-skin/frontend/base/default/css/* /skin/frontend/base/default/css/
+app/design/frontend/base/default/productpageshipping.css app/design/frontend/base/default/productpageshipping.css
+skin/frontend/base/default/css/productpageshipping.css /skin/frontend/base/default/css/productpageshipping.css
 app/locale/en_US/* app/locale/en_US/
