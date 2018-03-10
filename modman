@@ -2,4 +2,5 @@ app/code/community/WebDevlopers/ProductPageShipping app/code/community/WebDevlop
 app/design/frontend/base/default/layout/productpageshipping.xml app/design/frontend/base/default/layout/productpageshipping.xml
 app/design/frontend/base/default/template/webdevlopers/productpageshipping/estimate app/design/frontend/base/default/template/webdevlopers/productpageshipping/estimate
 skin/frontend/base/default/css/productpageshipping.css /skin/frontend/base/default/css/productpageshipping.css
+app/etc/modules/* app/etc/modules/
 app/locale/en_US/* app/locale/en_US/
