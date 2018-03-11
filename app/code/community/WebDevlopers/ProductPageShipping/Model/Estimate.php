@@ -40,7 +40,24 @@ class WebDevlopers_ProductPageShipping_Model_Estimate
     
     public function getProduct()
     {
-        return $this->_product;
+       
+       //Verify if the product is configurable, since configurable products doesn’t have weight to estimate
+            if($this->_product->isConfigurable()){
+                //For convenience, creates a new variable just for our product
+                $configurableProduct = $this->_product;
+                //Load an array with all the associated products
+                $associated_products = $configurableProduct->loadByAttribute('sku', $configurableProduct->getSku())->getTypeInstance()->getUsedProducts();
+                //Run foreach just once to get the first of the associated products
+                foreach($associated_products as $assoc){
+                    $this->_product = $assoc;
+                    break;
+                }
+                //Return the product
+                return $this->_product;
+            }
+            return $this->_product;
+       
+        //return $this->_product;
     }
 
     
