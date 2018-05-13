@@ -43,7 +43,7 @@ class WebDevlopers_ProductPageShipping_Model_Estimate
     
     public function getProduct()
     {
-       
+       $prod = $this->_product;
        //Verify if the product is configurable, since configurable products doesn’t have weight to estimate
             if($this->_product->isConfigurable()){
                 //For convenience, creates a new variable just for our product
@@ -53,17 +53,16 @@ class WebDevlopers_ProductPageShipping_Model_Estimate
                 //Run foreach just once to get the first of the associated products
                
                 foreach($associated_products as $assoc){
-                   $logss = $assoc;
-               Mage::log($assoc);
-                    $this->_product = $assoc;
+                   //$logss = $assoc;
+                   //Mage::log($assoc);
+                     $prod = $assoc;
                     break;
-                }
-                //Return the product
-                return $this->_product;
-            }
-            $logss =$this->_product;
-            Mage::log($assoc);
-            return $this->_product;
+                 }
+             }
+            $logss = $prod;
+            Mage::log($prod);
+            $this->_product = $prod;
+            return $prod;
        
         //return $this->_product;
     }
