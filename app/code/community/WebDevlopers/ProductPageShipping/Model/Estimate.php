@@ -68,8 +68,7 @@ class WebDevlopers_ProductPageShipping_Model_Estimate
                         
                         if ($assoc->getTamanho() == $logss[203]){
                             $prod = Mage::getModel('catalog/product')->load($assoc->getId());
-                            Mage::log("okay");
-                            Mage::log($prod);
+                            //essa alteração é unica para a loja pois pega tamanho do atributo tamanho onde o peso é maior
                             break;
                         } 
                       
