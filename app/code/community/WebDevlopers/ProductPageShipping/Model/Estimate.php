@@ -48,6 +48,7 @@ class WebDevlopers_ProductPageShipping_Model_Estimate
                 //Load an array with all the associated products
                 $associated_products = $configurableProduct->loadByAttribute('sku', $configurableProduct->getSku())->getTypeInstance(true)->getUsedProducts();
                 //Run foreach just once to get the first of the associated products
+               Mage::log(var_dump($associated_products));
                 foreach($associated_products as $assoc){
                     $this->_product = $assoc;
                     break;
