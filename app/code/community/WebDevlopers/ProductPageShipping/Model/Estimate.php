@@ -62,11 +62,21 @@ class WebDevlopers_ProductPageShipping_Model_Estimate
                 //Run foreach just once to get the first of the associated products
                
                 foreach($associated_products as $assoc){
-                   $logss = $this->getTamanho();
-                   Mage::log($logss);
-                   
-                   $prod = Mage::getModel('catalog/product')->load($assoc->getId());                   
-                    break;
+                     $logss = $this->getTamanho();
+                     Mage::log($logss);
+                     if (!empty($logss[203])){
+                        if ($assoc->getTamanho() == $logss[203]){
+                           $prod = Mage::getModel('catalog/product')->load($assoc->getId());                   
+                           break;
+                        } else {
+                           $prod = Mage::getModel('catalog/product')->load($assoc->getId());                   
+                            break;
+                        }
+                      
+                     } else {
+                          $prod = Mage::getModel('catalog/product')->load($assoc->getId());                   
+                          break;
+                     }
                  }
              }
             //$logss = $prod;
