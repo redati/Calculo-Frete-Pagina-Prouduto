@@ -55,7 +55,7 @@ class WebDevlopers_ProductPageShipping_Model_Estimate
                 foreach($associated_products as $assoc){
                    //$logss = $assoc;
                    //Mage::log($assoc);
-                     $prod = $assoc;
+                     $prod = Mage::getModel('catalog/product')->load($assoc->getId());;
                     break;
                  }
              }
