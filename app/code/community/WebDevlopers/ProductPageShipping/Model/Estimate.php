@@ -63,7 +63,8 @@ class WebDevlopers_ProductPageShipping_Model_Estimate
                
                 foreach($associated_products as $assoc){
                      $logss = $this->getTamanho();
-                     Mage::log($logss);
+                     $tam = $assoc->getTamanho();
+                     Mage::log($tam);
                      if (!empty($logss[203])){
                         if ($assoc->getTamanho() == $logss[203]){
                            $prod = Mage::getModel('catalog/product')->load($assoc->getId());                   
