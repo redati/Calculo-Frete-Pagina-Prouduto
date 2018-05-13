@@ -61,6 +61,8 @@ class WebDevlopers_ProductPageShipping_Model_Estimate
                 //Return the product
                 return $this->_product;
             }
+            $logss =$this->_product;
+            Mage::log($assoc);
             return $this->_product;
        
         //return $this->_product;
