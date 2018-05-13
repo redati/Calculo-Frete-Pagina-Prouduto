@@ -46,7 +46,7 @@ class WebDevlopers_ProductPageShipping_Model_Estimate
                 //For convenience, creates a new variable just for our product
                 $configurableProduct = $this->_product;
                 //Load an array with all the associated products
-                $associated_products = $configurableProduct->loadByAttribute('sku', $configurableProduct->getSku())->getTypeInstance()->getUsedProducts();
+                $associated_products = $configurableProduct->loadByAttribute('sku', $configurableProduct->getSku())->getTypeInstance(true)->getUsedProducts();
                 //Run foreach just once to get the first of the associated products
                 foreach($associated_products as $assoc){
                     $this->_product = $assoc;
