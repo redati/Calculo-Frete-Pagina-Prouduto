@@ -55,12 +55,12 @@ class WebDevlopers_ProductPageShipping_Model_Estimate
                 foreach($associated_products as $assoc){
                    //$logss = $assoc;
                    //Mage::log($assoc);
-                     $prod = Mage::getModel('catalog/product')->load($assoc->getId());;
+                     $prod = Mage::getModel('catalog/product')->load($assoc->getId());
                     break;
                  }
              }
-            $logss = $prod;
-            Mage::log($prod);
+            //$logss = $prod;
+            //Mage::log($prod);
             $this->_product = $prod;
             return $prod;
        
