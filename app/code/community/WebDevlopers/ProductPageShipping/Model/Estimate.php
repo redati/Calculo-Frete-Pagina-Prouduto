@@ -67,16 +67,16 @@ class WebDevlopers_ProductPageShipping_Model_Estimate
                      Mage::log($tam);
                      if (!empty($logss[203])){
                         if ($assoc->getTamanho() == $logss[203]){
-                           $prod = Mage::getModel('catalog/product')->load($assoc->getId());                   
+                           $prod = Mage::getModel('catalog/product')->load($assoc->getId());               
                            break;
                         } else {
                            $prod = Mage::getModel('catalog/product')->load($assoc->getId());                   
-                            break;
+                           
                         }
                       
                      } else {
                           $prod = Mage::getModel('catalog/product')->load($assoc->getId());                   
-                          break;
+                          
                      }
                  }
              }
