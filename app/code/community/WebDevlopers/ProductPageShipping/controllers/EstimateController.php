@@ -17,7 +17,8 @@ class WebDevlopers_ProductPageShipping_EstimateController extends Mage_Catalog_P
             $product->setAddToCartInfo((array) $this->getRequest()->getPost());
             $estimate->setProduct($product);
             $addressInfo = $this->getRequest()->getPost('estimate');
-            $tamanho = $this->getRequest()->getPost('super_attribute[203]');
+            $tamanho = $this->getRequest()->getPost('super_attribute');
+            Mage::log("Tamanho");
             Mage::log($tamanho);
             $estimate->setAddressInfo((array) $addressInfo);
             $block->getSession()->setFormValues($addressInfo);
