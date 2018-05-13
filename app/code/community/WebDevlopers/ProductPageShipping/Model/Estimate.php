@@ -19,7 +19,16 @@ class WebDevlopers_ProductPageShipping_Model_Estimate
 
     
     protected $_addressInfo = null;
+   
+     protected $_tamanho = null;
 
+   public function setTamanho($tamanho){
+      $this->_tamanho = $tamanho;
+      return $this->_tamanho;
+   }
+   public function getTamanho(){
+        return $this->_tamanho;
+   }
    
     public function setAddressInfo($info)
     {
@@ -53,9 +62,10 @@ class WebDevlopers_ProductPageShipping_Model_Estimate
                 //Run foreach just once to get the first of the associated products
                
                 foreach($associated_products as $assoc){
-                   //$logss = $assoc;
-                   //Mage::log($assoc);
-                     $prod = Mage::getModel('catalog/product')->load($assoc->getId());
+                   $logss = $this->getTamanho();
+                   Mage::log($logss);
+                   
+                   $prod = Mage::getModel('catalog/product')->load($assoc->getId());                   
                     break;
                  }
              }
