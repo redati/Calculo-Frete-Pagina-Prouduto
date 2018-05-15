@@ -117,25 +117,25 @@ class WebDevlopers_ProductPageShipping_Model_Estimate
 
         $shippingAddress = $this->getQuote()->getShippingAddress();
 
-        $shippingAddress->setCountryId($addressInfo['country_id']);
+        //$shippingAddress->setCountryId($addressInfo['country_id']);
 
         if (isset($addressInfo['region_id'])) {
-            $shippingAddress->setRegionId($addressInfo['region_id']);
+           // $shippingAddress->setRegionId($addressInfo['region_id']);
         }
 
         if (isset($addressInfo['postcode'])) {
-            $shippingAddress->setPostcode($addressInfo['postcode']);
+           // $shippingAddress->setPostcode($addressInfo['postcode']);
         }
 
         if (isset($addressInfo['region'])) {
-            $shippingAddress->setRegion($addressInfo['region']);
+           // $shippingAddress->setRegion($addressInfo['region']);
         }
 
         if (isset($addressInfo['city'])) {
-            $shippingAddress->setCity($addressInfo['city']);
+           // $shippingAddress->setCity($addressInfo['city']);
         }
 
-        $shippingAddress->setCollectShippingRates(true);
+       // $shippingAddress->setCollectShippingRates(true);
 
         if (isset($addressInfo['coupon_code'])) {
             $this->getQuote()->setCouponCode($addressInfo['coupon_code']);
