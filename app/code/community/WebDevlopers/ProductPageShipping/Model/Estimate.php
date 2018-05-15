@@ -1,7 +1,6 @@
 <?php
 
-error_reporting(EL_ALL);
-ini_set('dysplay_erros','on');
+
 
 class WebDevlopers_ProductPageShipping_Model_Estimate
 {
