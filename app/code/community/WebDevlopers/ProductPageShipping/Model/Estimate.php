@@ -126,6 +126,8 @@ class WebDevlopers_ProductPageShipping_Model_Estimate
         if (isset($addressInfo['postcode'])) {
             $shippingAddress->setPostcode($addressInfo['postcode']);
         }
+       
+  
 
         if (isset($addressInfo['region'])) {
             $shippingAddress->setRegion($addressInfo['region']);
@@ -192,7 +194,9 @@ class WebDevlopers_ProductPageShipping_Model_Estimate
 
         return $this;
     }
-
+      public function getEstimatePostcode() {
+          $shippingAddress->setPostcode($addressInfo['postcode']);
+       }
     
     public function getCustomer()
     {
