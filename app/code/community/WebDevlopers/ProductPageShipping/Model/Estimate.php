@@ -195,7 +195,7 @@ class WebDevlopers_ProductPageShipping_Model_Estimate
         return $this;
     }
       public function getEstimatePostcode() {
-          $shippingAddress->setPostcode($addressInfo['postcode']);
+          return $this->getQuote()->getShippingAddress()->getData('postcode');
        }
     
     public function getCustomer()
