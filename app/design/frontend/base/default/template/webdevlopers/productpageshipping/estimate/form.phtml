@@ -54,7 +54,7 @@
             <li class="item">
                 <label for="estimate_postcode"<?php if ($this->isFieldRequired('postcode')):?> class="required" <?php endif;?>></label>
                 <div class="input-box">
-                   Digite seu CEP:  <input style=" max-width: 100px; " class="input-text validate-postcode" type="text" id="estimate_postcode" name="estimate[postcode]" value="<?php echo $this->escapeHtml($this->getEstimatePostcode()) ?>" />
+                   Digite seu CEP:  <input style=" max-width: 100px; " class="input-text validate-postcode" type="text" id="estimate_postcode" name="estimate[postcode]" value="<?php echo $this->htmlEscape($this->getFieldValue('postcode')) ?>" />
                 <button type="button" title="<?php echo Mage::helper('webdevlopers_productpageshipping')->getButton(); ?>" onclick="estimateProductShipping()" class="btn btn-default btn-md"> <span> <span> <?php echo Mage::helper('webdevlopers_productpageshipping')->__('Get a Quote') ?> </span> </span> </button>
                 </div>
             </li>
