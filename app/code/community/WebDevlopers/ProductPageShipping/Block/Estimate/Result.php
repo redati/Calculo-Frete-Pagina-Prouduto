@@ -24,7 +24,10 @@ class WebDevlopers_ProductPageShipping_Block_Estimate_Result extends WebDevloper
 
         return null;
     }
-
+    public function getEstimatePostcode()
+    {
+          return $this->getAddress()->getPostcode();
+     }
   
     public function getShippingPrice($price, $flag)
     {
